@@ -1,101 +1,89 @@
-// Background movement
-const bgLayer = document.querySelector(".bg-layer");
+// Language switching
+let currentLang = 'en';
 
-document.addEventListener("mousemove", e => {
-  const x = (e.clientX / window.innerWidth - 0.5) * 40;
-  const y = (e.clientY / window.innerHeight - 0.5) * 40;
-  bgLayer.style.transform = `translate(${x}px, ${y}px)`;
-});
+function applyTranslations(lang) {
+  currentLang = lang;
+  const dict = translations[lang];
+  if (!dict) return;
 
-// Floating particles
-const particles = document.querySelector('.particles');
-
-for (let i = 0; i < 40; i++) {
-  const dot = document.createElement('span');
-  dot.style.left = Math.random() * 100 + '%';
-  dot.style.top = Math.random() * 100 + '%';
-  dot.style.animationDelay = Math.random() * 5 + 's';
-  particles.appendChild(dot);
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (dict[key]) {
+      el.textContent = dict[key];
+    }
+  });
 }
 
-// Magnetic hover
-document.querySelectorAll('.magnetic').forEach(el => {
-  el.addEventListener('mousemove', e => {
-    const rect = el.getBoundingClientRect();
-    const x = (e.clientX - rect.left - rect.width / 2) / 20;
-    const y = (e.clientY - rect.top - rect.height / 2) / 20;
-    el.style.transform = `translate(${x}px, ${y}px)`;
-  });
-
-  el.addEventListener('mouseleave', () => {
-    el.style.transform = `translate(0px, 0px)`;
+document.querySelectorAll('.lang-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelector('.lang-active').classList.remove('lang-active');
+    btn.classList.add('lang-active');
+    const lang = btn.getAttribute('data-lang');
+    applyTranslations(lang);
   });
 });
 
-// Cursor glow motion (delayed)
-const glow = document.querySelector('.cursor-glow');
-let glowX = 0;
-let glowY = 0;
-
-document.addEventListener('mousemove', e => {
-  glowX = e.clientX;
-  glowY = e.clientY;
-});
-
-function animateGlow() {
-  const currentX = parseFloat(glow.style.left) || 0;
-  const currentY = parseFloat(glow.style.top) || 0;
-
-  const newX = currentX + (glowX - currentX) * 0.15;
-  const newY = currentY + (glowY - currentY) * 0.15;
-
-  glow.style.left = newX + 'px';
-  glow.style.top = newY + 'px';
-
-  requestAnimationFrame(animateGlow);
-}
-
-animateGlow();
-
-// Metrics counter animation
-const counters = document.querySelectorAll(".metric-number");
-let countersStarted = false;
-
-const startCounters = () => {
-  if (countersStarted) return;
-  countersStarted = true;
-
-  counters.forEach(counter => {
-    const target = +counter.getAttribute("data-count");
-    let count = 0;
-
-    const update = () => {
-      count += 1;
-      counter.textContent = count;
-      if (count < target) requestAnimationFrame(update);
-    };
-
-    update();
-  });
-};
+// Initial language
+applyTranslations('en');
 
 // Reveal on scroll
-const reveals = document.querySelectorAll('.reveal');
-
-const revealOnScroll = () => {
-  reveals.forEach(el => {
+const revealEls = document.querySelectorAll('.reveal');
+function handleReveal() {
+  const trigger = window.innerHeight * 0.80;
+  revealEls.forEach(el => {
     const rect = el.getBoundingClientRect();
-    if (rect.top < window.innerHeight - 100) {
+    if (rect.top < trigger) {
       el.classList.add('visible');
     }
   });
+}
+window.addEventListener('scroll', handleReveal);
+window.addEventListener('load', handleReveal);
 
-  const metrics = document.querySelector("#metrics");
-  const rect = metrics.getBoundingClientRect();
-  if (rect.top < window.innerHeight && rect.bottom >= 0) {
-    startCounters();
-  }
-};
+// Metric counters
+const metricEls = document.querySelectorAll('.metric-number');
+let countersStarted = false;
 
-window.addEventListener("scroll", revealOnScroll);
-revealOnScroll();
+function startCounters() {
+  if (countersStarted) return;
+
+  // FIXED TRIGGER
+  const trigger = window.innerHeight * 0.85;
+
+  metricEls.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < trigger) {
+      const target = parseInt(el.getAttribute('data-count'), 10);
+      let current = 0;
+      const step = Math.max(1, Math.floor(target / 50));
+      const interval = setInterval(() => {
+        current += step;
+        if (current >= target) {
+          current = target;
+          clearInterval(interval);
+        }
+        el.textContent = current;
+      }, 40);
+    }
+  });
+
+  countersStarted = true;
+}
+
+window.addEventListener('scroll', startCounters);
+window.addEventListener('load', startCounters);
+
+// Smooth scroll for internal links
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', e => {
+    const targetId = link.getAttribute('href').substring(1);
+    const targetEl = document.getElementById(targetId);
+    if (targetEl) {
+      e.preventDefault();
+      window.scrollTo({
+        top: targetEl.offsetTop - 80,
+        behavior: 'smooth'
+      });
+    }
+  });
+});

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Pasquan – SAP EWM & AI Solutions</title>
+  <title>PASQUAN – SAP EWM & AI Solutions</title>
 
   <!-- Satoshi + Manrope Fonts -->
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=manrope@300,400,500,600&display=swap" rel="stylesheet">
@@ -24,20 +24,20 @@
       </div>
 
       <nav class="nav-links">
-        <a href="#hero" class="magnetic">Home</a>
-        <a href="#about" class="magnetic">About</a>
-        <a href="#why" class="magnetic">Why Pasquan</a>
-        <a href="#services" class="magnetic">Services</a>
-        <a href="#metrics" class="magnetic">Experience</a>
-        <a href="#contact" class="magnetic">Contact</a>
+        <a href="#hero" class="magnetic" data-i18n="nav_home">Home</a>
+        <a href="#about" class="magnetic" data-i18n="nav_about">About</a>
+        <a href="#why" class="magnetic" data-i18n="nav_why">Why PASQUAN</a>
+        <a href="#services" class="magnetic" data-i18n="nav_services">Services</a>
+        <a href="#metrics" class="magnetic" data-i18n="nav_experience">Experience</a>
+        <a href="#contact" class="magnetic" data-i18n="nav_contact">Contact</a>
       </nav>
 
       <div class="nav-right">
         <div class="lang-switch magnetic">
-          <button class="lang-btn lang-active">EN</button>
-          <button class="lang-btn">DE</button>
+          <button class="lang-btn lang-active" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="de">DE</button>
         </div>
-        <a href="#contact" class="btn-consultation magnetic">Get Consultation</a>
+        <a href="#contact" class="btn-consultation magnetic" data-i18n="nav_consultation">Get Consultation</a>
       </div>
     </div>
   </header>
@@ -45,13 +45,13 @@
   <!-- HERO -->
   <section id="hero" class="hero reveal">
     <div class="hero-inner">
-      <h1 class="hero-title">Intelligent SAP EWM & AI Solutions</h1>
-      <p class="hero-sub">
+      <h1 class="hero-title" data-i18n="hero_title">Intelligent SAP EWM & AI Solutions</h1>
+      <p class="hero-sub" data-i18n="hero_sub">
         Enterprise-grade logistics innovation powered by SAP EWM, MFS, AI, and S/4HANA.
       </p>
       <div class="hero-actions">
-        <a href="#contact" class="btn-primary magnetic">Book Consultation</a>
-        <a href="#services" class="btn-secondary magnetic">View Services</a>
+        <a href="#contact" class="btn-primary magnetic" data-i18n="hero_cta_contact">Book Consultation</a>
+        <a href="#services" class="btn-secondary magnetic" data-i18n="hero_cta_services">View Services</a>
       </div>
     </div>
   </section>
@@ -59,24 +59,24 @@
   <!-- ABOUT -->
   <section id="about" class="section reveal">
     <div class="section-inner">
-      <h2 class="section-title">About Pasquan</h2>
-      <p class="section-lead">
-        Pasquan is a Munich-based SAP consulting company specializing in intelligent warehousing,
+      <h2 class="section-title" data-i18n="about_title">About PASQUAN</h2>
+      <p class="section-lead" data-i18n="about_lead">
+        PASQUAN is a Munich-based SAP consulting company specializing in intelligent warehousing,
         automation, and digital transformation.
       </p>
 
       <div class="cards-grid">
         <div class="info-card magnetic">
-          <h3>Munich Headquarters</h3>
-          <p>
+          <h3 data-i18n="about_munich_title">Munich Headquarters</h3>
+          <p data-i18n="about_munich_text">
             Located at Jella-Lepman-Straße, 81673 München, our HQ focuses on SAP architecture,
             consulting, solution design, and innovation.
           </p>
         </div>
 
         <div class="info-card magnetic">
-          <h3>Bangalore Delivery Center</h3>
-          <p>
+          <h3 data-i18n="about_blr_title">Bangalore Delivery Center</h3>
+          <p data-i18n="about_blr_text">
             Our global delivery network supports development, support, scaling, and 24/7 operations
             for SAP logistics environments.
           </p>
@@ -88,31 +88,33 @@
   <!-- WHY PASQUAN -->
   <section id="why" class="section reveal">
     <div class="section-inner">
-      <h2 class="section-title">Why Pasquan</h2>
-      <p class="section-lead">
+      <h2 class="section-title" data-i18n="why_title">Why PASQUAN</h2>
+      <p class="section-lead" data-i18n="why_lead">
         We deliver measurable outcomes, not just effort — combining SAP expertise with automation and AI.
       </p>
 
       <div class="cards-grid">
+
         <div class="info-card magnetic">
-          <h3>Experience</h3>
-          <p>15+ years of SAP logistics experience across EWM, MFS, and S/4HANA.</p>
+          <h3 data-i18n="why_exp_title">Experience</h3>
+          <p data-i18n="why_exp_text">18+ years of SAP EWM experience and 10+ years of SAP EWM AI innovation.</p>
         </div>
 
         <div class="info-card magnetic">
-          <h3>Projects</h3>
-          <p>40+ successful SAP EWM & MFS implementations worldwide.</p>
+          <h3 data-i18n="why_proj_title">Projects</h3>
+          <p data-i18n="why_proj_text">10+ successful SAP EWM & MFS implementations worldwide.</p>
         </div>
 
         <div class="info-card magnetic">
-          <h3>Delivery Model</h3>
-          <p>Dual-shore delivery from Munich HQ and Bangalore center.</p>
+          <h3 data-i18n="why_model_title">Delivery Model</h3>
+          <p data-i18n="why_model_text">Dual-shore delivery from Munich HQ and Bangalore center.</p>
         </div>
 
         <div class="info-card magnetic">
-          <h3>Focus on Results</h3>
-          <p>We prioritize stable go-lives, performance, and operational reliability.</p>
+          <h3 data-i18n="why_focus_title">Focus on Results</h3>
+          <p data-i18n="why_focus_text">We prioritize stable go-lives, performance, and operational reliability.</p>
         </div>
+
       </div>
     </div>
   </section>
@@ -121,25 +123,33 @@
   <section id="metrics" class="section reveal">
     <div class="section-inner">
       <div class="metrics-combined magnetic">
+
         <div class="metric-item">
-          <span class="metric-number" data-count="15">0</span>
-          <span class="metric-text">Years Experience</span>
+          <span class="metric-number" data-count="18">0</span>
+          <span class="metric-text" data-i18n="metric_ewm">Years EWM Experience</span>
         </div>
+
         <div class="metric-divider"></div>
+
         <div class="metric-item">
-          <span class="metric-number" data-count="40">0</span>
-          <span class="metric-text">SAP Projects Delivered</span>
+          <span class="metric-number" data-count="10">0</span>
+          <span class="metric-text" data-i18n="metric_projects">SAP Projects Delivered</span>
         </div>
+
         <div class="metric-divider"></div>
+
         <div class="metric-item">
           <span class="metric-number" data-count="20">0</span>
-          <span class="metric-text">EWM/MFS Experts</span>
+          <span class="metric-text" data-i18n="metric_experts">EWM/MFS Experts</span>
         </div>
+
         <div class="metric-divider"></div>
+
         <div class="metric-item">
           <span class="metric-number" data-count="2">0</span>
-          <span class="metric-text">Global Delivery Centers</span>
+          <span class="metric-text" data-i18n="metric_centers">Global Delivery Centers</span>
         </div>
+
       </div>
     </div>
   </section>
@@ -147,36 +157,44 @@
   <!-- SERVICES -->
   <section id="services" class="section reveal">
     <div class="section-inner">
-      <h2 class="section-title">Our Services</h2>
-      <p class="section-lead">
+      <h2 class="section-title" data-i18n="services_title">Our Services</h2>
+      <p class="section-lead" data-i18n="services_lead">
         End-to-end SAP logistics consulting, automation, and optimization.
       </p>
 
       <div class="cards-grid">
+
         <div class="info-card magnetic">
-          <h3>SAP EWM Consulting</h3>
-          <p>Warehouse design, optimization, and implementation.</p>
+          <h3 data-i18n="svc_ewm_title">SAP EWM Consulting</h3>
+          <p data-i18n="svc_ewm_text">Warehouse design, optimization, and implementation.</p>
         </div>
 
         <div class="info-card magnetic">
-          <h3>SAP MFS Integration</h3>
-          <p>Automation, robotics, conveyor systems, PLC integration.</p>
+          <h3 data-i18n="svc_mfs_title">SAP MFS Integration</h3>
+          <p data-i18n="svc_mfs_text">Automation, robotics, conveyor systems, PLC integration.</p>
         </div>
 
         <div class="info-card magnetic">
-          <h3>SAP AI Automation</h3>
-          <p>Predictive analytics and AI-driven warehouse optimization.</p>
+          <h3 data-i18n="svc_ai_title">SAP AI Automation</h3>
+          <ul>
+            <li data-i18n="svc_ai_item1">Use Case Definition</li>
+            <li data-i18n="svc_ai_item2">Algorithm Definition & Implementation Approach</li>
+            <li data-i18n="svc_ai_item3">Prototype & Deploy</li>
+            <li data-i18n="svc_ai_item4">Model Fine-Tune & Scale</li>
+            <li data-i18n="svc_ai_item5">15+ years of use-case consulting</li>
+          </ul>
         </div>
 
         <div class="info-card magnetic">
-          <h3>S/4HANA Migration</h3>
-          <p>Planning, execution, testing, and go-live support.</p>
+          <h3 data-i18n="svc_s4_title">S/4HANA Migration</h3>
+          <p data-i18n="svc_s4_text">Planning, execution, testing, and go-live support.</p>
         </div>
 
         <div class="info-card magnetic">
-          <h3>Support & Maintenance</h3>
-          <p>24/7 monitoring, enhancements, and enterprise support.</p>
+          <h3 data-i18n="svc_support_title">Support & Maintenance</h3>
+          <p data-i18n="svc_support_text">24/7 monitoring, enhancements, and enterprise support.</p>
         </div>
+
       </div>
     </div>
   </section>
@@ -185,30 +203,27 @@
   <section id="contact" class="contact-section reveal">
     <div class="contact-inner">
 
-      <h2 class="contact-main-title">We are happy to be there for you.</h2>
-      <p class="contact-subtitle">
+      <h2 class="contact-main-title" data-i18n="contact_title">We are happy to be there for you.</h2>
+      <p class="contact-subtitle" data-i18n="contact_sub">
         We value our customers highly and are delighted that you are visiting our website.
         What can we do for you?
       </p>
 
-      <a href="https://wa.me/4917600000000" target="_blank" class="contact-whatsapp-btn magnetic">
-        <span class="wa-icon">💬</span> Send a WhatsApp message
-      </a>
-
       <div class="contact-details">
-        <h3>Pasquan UG</h3>
-        <p>C/O Raghav Naidu</p>
-        <p>Jella-Lepman-Straße 20</p>
-        <p>Munich-Berg am Laim, Germany</p>
+        <h3 data-i18n="contact_company">PASQUAN UG</h3>
+        <p data-i18n="contact_careof">C/O Raghav Naidu</p>
+        <p data-i18n="contact_street">Jella-Lepman-Straße</p>
+        <p data-i18n="contact_city">Munich-Berg am Laim, Germany</p>
+        <p data-i18n="contact_tz">Time Zone: CET (Central European Time)</p>
         <p><a href="mailto:raghav.naidu@pasquan.de">raghav.naidu@pasquan.de</a></p>
       </div>
 
       <div class="contact-hours">
-        <h3>Opening hours</h3>
-        <p>Open today 09:00 – 17:00</p>
+        <h3 data-i18n="contact_hours_title">Opening hours</h3>
+        <p data-i18n="contact_hours_text">Open today 09:00 – 17:00</p>
       </div>
 
-      <a href="mailto:raghav.naidu@pasquan.de" class="contact-email-btn magnetic">
+      <a href="mailto:raghav.naidu@pasquan.de" class="contact-email-btn magnetic" data-i18n="contact_email_btn">
         EMAIL US
       </a>
 
@@ -220,21 +235,21 @@
           loading="lazy"
           allowfullscreen
           referrerpolicy="no-referrer-when-downgrade"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2661.276969938316!2d11.622!3d48.131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479e76e6f0f0f0f%3A0x123456789abcdef!2sJella-Lepman-Stra%C3%9Fe%2020%2C%20Munich!5e0!3m2!1sen!2sde!4v1690000000000">
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2661.276969938316!2d11.622!3d48.131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479e76e6f0f0f0f%3A0x123456789abcdef!2sJella-Lepman-Stra%C3%9Fe%2C%20Munich!5e0!3m2!1sen!2sde!4v1690000000000">
         </iframe>
       </div>
 
       <!-- ENQUIRY FORM -->
       <div class="enquiry-form-wrapper magnetic">
-        <h2 class="enquiry-title">Send us your enquiry</h2>
-        <p class="enquiry-subtitle">Tell us what you need — we will get back to you quickly.</p>
+        <h2 class="enquiry-title" data-i18n="form_title">Send us your enquiry</h2>
+        <p class="enquiry-subtitle" data-i18n="form_sub">Tell us what you need — we will get back to you quickly.</p>
 
-        <form class="enquiry-form">
-          <input type="text" placeholder="Your Name" required />
-          <input type="text" placeholder="Mobile Number" required />
-          <input type="email" placeholder="Your Email" required />
-          <textarea placeholder="Describe your requirement" required></textarea>
-          <button type="submit" class="enquiry-submit-btn magnetic">Submit Enquiry</button>
+        <form class="enquiry-form" action="contact.php" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="text" name="mobile" placeholder="Mobile Number" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" placeholder="Describe your requirement" required></textarea>
+          <button type="submit" class="enquiry-submit-btn magnetic" data-i18n="form_submit">Submit Enquiry</button>
         </form>
       </div>
 
@@ -254,14 +269,15 @@
       </div>
 
       <div class="footer-links">
-        <a href="#about" class="magnetic">About</a>
-        <a href="#why" class="magnetic">Why Pasquan</a>
-        <a href="#services" class="magnetic">Services</a>
-        <a href="#contact" class="magnetic">Contact</a>
+        <a href="#about" class="magnetic" data-i18n="nav_about">About</a>
+        <a href="#why" class="magnetic" data-i18n="nav_why">Why PASQUAN</a>
+        <a href="#services" class="magnetic" data-i18n="nav_services">Services</a>
+        <a href="#contact" class="magnetic" data-i18n="nav_contact">Contact</a>
       </div>
     </div>
   </footer>
 
+  <script src="translations.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

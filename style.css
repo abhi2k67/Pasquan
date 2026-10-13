@@ -138,7 +138,7 @@ body {
 
 /* HERO */
 .hero {
-  padding: 130px 40px 40px; /* FIXED */
+  padding: 130px 40px 40px;
   text-align: center;
 }
 
@@ -167,7 +167,7 @@ body {
 
 /* SECTIONS */
 .section {
-  padding: 70px 40px; /* FIXED */
+  padding: 70px 40px;
 }
 
 .section-inner {
@@ -206,78 +206,78 @@ body {
   transform: translateY(-2px);
 }
 
-/* METRICS */
-.metrics-combined {
-  display: flex;
-  justify-content: center;
-  gap: 32px;
-  flex-wrap: wrap;
-  padding: 32px;
-  background: rgba(10, 10, 10, 0.9);
-  border-radius: 12px;
-}
-
-.metric-item {
-  text-align: center;
-  min-width: 140px;
-}
-
-.metric-number {
-  font-size: 36px;
-  font-weight: 700;
+/* BIG NUMBER (NEW) */
+.big-number {
+  font-size: 48px;
+  font-weight: 800;
   color: #00aaff;
-  display: inline-block; /* REQUIRED FIX */
-}
-
-.metric-text {
-  font-size: 14px;
-  color: #ccc;
-}
-
-.metric-divider {
-  width: 1px;
-  height: 50px;
-  background: #222;
+  margin-bottom: 12px;
+  text-shadow: 0 0 12px rgba(0, 170, 255, 0.4);
+  display: block;
 }
 
 /* CONTACT */
+/* CONTACT SECTION IMPROVED */
 .contact-section {
-  padding: 100px 40px;
+  padding: 120px 40px;
+  text-align: center; /* Center everything */
 }
 
 .contact-inner {
-  max-width: 1100px;
+  max-width: 800px; /* Narrower for better readability */
   margin: 0 auto;
 }
 
 .contact-main-title {
-  font-size: 28px;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 16px;
 }
 
 .contact-subtitle {
-  margin-top: 12px;
+  font-size: 18px;
   color: #ccc;
+  margin-bottom: 40px;
+  line-height: 1.7;
 }
 
-.contact-details,
-.contact-hours {
-  margin-top: 32px;
+/* Company details */
+.contact-details h3 {
+  font-size: 24px;
+  margin-bottom: 12px;
 }
 
-.contact-details p,
+.contact-details p {
+  font-size: 16px;
+  color: #ccc;
+  margin: 4px 0;
+}
+
+/* Opening hours */
+.contact-hours h3 {
+  font-size: 22px;
+  margin-top: 40px;
+}
+
 .contact-hours p {
+  font-size: 16px;
   color: #ccc;
+  margin-top: 8px;
 }
 
+/* Email button */
 .contact-email-btn {
-  margin-top: 24px;
-  background: #00aaff;
-  color: #fff;
+  margin-top: 40px;
+  padding: 14px 32px;
+  font-size: 16px;
+  border-radius: 10px;
 }
 
-/* MAP */
+/* Map centering */
 .contact-map {
-  margin-top: 32px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
 }
 
 /* FORM */
@@ -373,15 +373,6 @@ body {
 
   .hero-sub {
     font-size: 15px;
-  }
-
-  .metrics-combined {
-    flex-direction: column;
-    gap: 16px;
-  }
-
-  .metric-divider {
-    display: none;
   }
 
   .footer-inner {
